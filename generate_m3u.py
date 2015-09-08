@@ -25,7 +25,7 @@ m3u += '#EXTM3U\n'
 
 for show_set in js_data['sets']:
     for track in show_set['tracks']:
-        m3u += '#EXTINF:%d, Phish: %s\n' % (track['duration']/1000, track['title'])
+        m3u += '#EXTINF:%d,Phish - %s\n' % (track['duration']/1000, track['title'])
         m3u += track['file_url'] + '\n'
 
 f = open('phish_%s.m3u' % (date,), 'w')
